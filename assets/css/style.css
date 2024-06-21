@@ -316,7 +316,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: fit-content;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -387,16 +387,6 @@ main {
 
 .info_more-btn span { display: none; }
 
-.sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-2);
-}
-
-.sidebar.active .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
-}
 
 .contacts-list {
   display: grid;
@@ -1139,7 +1129,7 @@ main {
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: fit-content;
     margin-bottom: 30px;
   }
 
@@ -1656,10 +1646,6 @@ main {
 
   .info_more-btn { display: none; }
 
-  .sidebar-info_more {
-    opacity: 1;
-    visibility: visible;
-  }
 
   .contacts-list { grid-template-columns: 1fr; }
 
