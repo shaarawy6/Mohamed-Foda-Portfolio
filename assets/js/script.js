@@ -162,6 +162,15 @@ serviceLinks.forEach(link => {
         top: targetElement.offsetTop,
         behavior: 'smooth'
       });
+
+      // Activate the corresponding filter button
+      filterBtns.forEach(btn => {
+        if (btn.innerText.replace(/\s+/g, '-').toLowerCase() === targetId.toLowerCase()) {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterFunc(btn.innerText.toLowerCase());
+        }
+      });
     }
   });
 });
